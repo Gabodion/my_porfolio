@@ -90,7 +90,7 @@ const projects = [
         "gitUrl": "https://github.com/Gabodion/advice-generator"
     },
     {
-        "imgSrc": "static/images/blogsite.jpg",
+        "imgSrc": "static/images/blogsite.png",
         "title":"Blog Site",
         "desc": "A Blog website with CRUD functionality. It also allows users to create an account and comment to blog posts",
         "tools": "HTML, CSS, BOOTSTRAP, JAVASCRIPT, PYTHON",
