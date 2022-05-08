@@ -134,7 +134,7 @@ function loadProjects(){
                     </div>`
     })
     
-    projectCards.innerHTML = all_project
+    projectCards.innerHTML = all_project;
     // console.log(all_project)
 }
 
