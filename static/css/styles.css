@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
+:root{
+    --header-background:lavender;
+    --call-to-action: #ff471a;
+    --hover-states: #C73814;
+    --skill-background: rgb(20, 12, 31);
+    --black: #000;
+    --white: #fff;
+    --text-font:'Poppins', sans-serif;
+    --header-font:'Montserrat', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:var(--text-font);
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-size: 16px;
+    width: 100%;
+}
+/* Navigation section */
+nav{
+    background-color: var(--white);
+    width: 100%;
+    padding: 2% 7%;
+    position: fixed;
+    
+    /* top: 0; */
+    /* overflow: hidden; */
+    z-index: 1;
+}
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--header-font);
+    color: var(--black);
+    margin-bottom: 0;
+}
+.name-pop{
+    color: var(--call-to-action);
+}
+.menu-bar{
+    border: none;
+    background-color: transparent;
+    font-size: 1.7rem;
+    color: var(--call-to-action);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.menu-bar:hover{
+    transform: rotate(90deg);
+}
+nav ul{
+    display: none;
+}
+.nav-bar ul li{
+    margin-top: 15px;
+    
+}
+.nav-bar ul li a{
+    font-size: 1rem;
+    color: var(--black);
+    font-family: var(--text-font);
+    margin-bottom: 2%;
+    font-weight: 400;
+    text-decoration: none;
+}
+.nav-bar ul li a:hover{
+    color: var(--call-to-action);
+}
+/* show links */
+.show-links{
+    display: block;
+    
+}
+
+/* Header Section */
+#header{
+    background-color: var(--header-background);
+    padding: 20% 0 5%;
+}
+.profile-content{
+    text-align: center;
+    
+}
+.profile-content p{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    
+}
+.profile-content h1{
+    font-size: 1.5rem;
+    font-family: var(--text-font);
+    font-weight: 700;
+    color: var(--call-to-action);
+    margin-bottom: 0;
+}
+.profile-content h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--text-font);
+}
+.my-profile-pix{
+    margin: 0 auto 5%;
+    width: 90%;
+}
+.btn{
+    color: var(--white);
+    display: inline-block;
+    margin-top: 4%;
+    background-color: var(--hover-states);
+    padding: 8px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.btn:hover{
+    background-color: var(--call-to-action);
+    color: var(--white);
+}
+.social-links{
+    margin-top: 8%;
+    margin-left: 5%;
+}
+.social-links a{
+    display: inline-block;
+    margin-right: 3%;
+    text-align: center;    
+}
+.social-links i:hover{
+    background-color: var(--call-to-action);
+    color: var(--white);
+    border-radius: 50%;
+}
+.social-links i{
+    /* margin-right: 6%; */
+    background-color: var(--hover-states);
+    padding: 10px;
+    color:  var(--white);
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+.social-links a:first-child i{
+    padding:10px 14px 10px 11px;
+    
+}
+
+/* About Section */
+.about-section, .skill-section, .project-section, .contact-section{
+    padding: 13% 6% 10%;
+}
+.about-heading, .skill-heading, .project-heading, .contact-heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--header-font);
+    position: relative;
+    margin-bottom: 10%;
+}
+.about-heading::after, .skill-heading::after, .project-heading::after, .contact-heading::after{
+    content: "";
+    height: 5px;
+    width: 50px;
+    background-color: var(--call-to-action);
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left: 2px;
+}
+.about-img{
+    width: 100%;
+    border-radius: 40px;
+}
+
+.about-info h2{
+    margin-top: 30px;
+    font-size: 1.2rem; 
+    font-weight: 700;
+}
+.about-info p{
+    line-height: 1.8;
+    font-size: 1rem;
+    
+}
+
+/* Skills Section */
+.skill-section{
+    background-color: var(--skill-background);
+    
+}
+.skill-heading{
+    color: var(--white);
+}
+.skill-content-inner{
+    padding: 10% 12% 0;
+}
+.skill-card{
+    /* border: 1px solid lightgray; */
+    background-color: var(--white);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px gray;
+    transition: transform 0.5s;
+    margin-bottom: 20px;
+  
+}
+.skill-card h3{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.skill-card:hover{
+    transform: translateY(-10px);
+    background-color: var(--call-to-action);
+    color: var(--white);
+}
+
+/* Project Section */
+.project-container {
+    padding: 0 6%;
+}
+.project-card{
+    width: 335px;
+    height: 400px;
+    border: 1px solid lightgray;
+    perspective: 1000px;
+    box-shadow: 2px 2px 6px gray;
+    border-radius: 10px;
+    margin-bottom: 20px ;
+    padding: 0;
+}
+.project-cards-inner{
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;  
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+
+}
+
+.project-card:hover .project-cards-inner{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+}
+.front-card, .back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+.front-card{
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+}
+.project-img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.back-card{
+    padding: 20px 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+    color: var(--black);
+    transform: rotateY(180deg);
+}
+
+.project-content{
+    text-align: center;
+}
+.project-title{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.project-info{   
+    margin-top: 8%;
+    line-height: 1.8;
+} 
+.project-tools{
+    margin-top: 4%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.project-links{
+    margin-top: 8%;
+}
+.project-content a{
+    font-size: 0.9rem;
+    margin-right: 2%;
+}
+.btn-transparent{
+    background-color: transparent;
+    border: 1px solid var(--call-to-action);
+    color: var(--black);
+}
+
+/* Contact Section */
+.contact-section{
+    background-color: var(--skill-background);
+    color: var(--white);
+}
+.form-container{
+    padding: 0 0.5%;
+}
+.get-in-touch h2, .form-content h3{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: var(--header-font);
+}
+.get-in-touch p{
+    text-align: left;
+    font-size: 0.9rem;
+    margin-bottom: 7%;
+    font-family: var(--text-font);
+    font-weight: 400;
+}
+.contact-me p{
+    font-size: 0.9rem;
+    margin-bottom: 3%;
+}
+
+/* Footer Section */
+
+.footer-section{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.footer-content p{
+    padding: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+
+/* Media Queries Section */
+
+@media screen and (min-width: 766px) {
+    /* Navigation section */
+    .logo{
+        font-size: 1.6rem;
+  
+    }
+    .menu-bar{
+        font-size: 1.6rem;
+    }
+    .nav-bar ul li a{
+        font-size: 1.1rem;
+    }
+
+    /* Header Section */
+    .profile-content{
+        margin-left: 20px;
+    }
+    .profile-content p{
+        font-size: 1rem;
+        
+    }
+    .profile-content h1{
+        font-size: 1.9rem;
+    }
+    .profile-content h3{
+        font-size: 1.4rem;
+    }
+    .my-profile-pix{
+        width: 70%;
+    }
+    .my-profile-pix.col-sm-12 {
+       flex:0 0 80%;
+    }
+    .btn{
+        padding: 8px 35px;
+        font-size: 1.2rem;
+    }
+
+    /* About Section */
+    .about-heading, .skill-heading, .project-heading, .contact-heading{
+        font-size: 1.9rem;
+    }
+    .about-heading::after, .skill-heading::after, .project-heading::after, .contact-heading::after{
+
+        width: 60px;
+        top: 35px;
+        
+    }
+    .about-img{
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+    .about-info{
+        margin-left: 10px;
+        
+    }
+    .about-info h2{
+        font-size: 1.4rem; 
+    }
+    .about-info p{
+        width: 100%;
+        line-height: 2;
+        font-size: 1.2rem;
+        text-align: justify;
+        
+        
+    }
+    /* Skills Section */
+    .skill-card{
+        margin-right: 15px;     
+    }
+    .col-md-4{
+        max-width: 30%;
+    }
+
+    /* Project Section */
+    .project-container {
+        padding: 0%;
+    }
+    .project-card{
+       margin-left: 40px;
+    }
+    .project-card.col-sm-12{
+        flex:0 0 90%;
+    }
+    .project-title{
+        font-size: 1.3rem;
+    }
+    .project-info, .project-tools{   
+        font-size: 1.15rem;
+    } 
+    .project-links{
+        margin-top: 8%;
+    }
+    .project-content a{
+        font-size: 0.9rem;
+        margin-right: 2%;
+    }
+
+    /* Contact Section */
+    .get-in-touch h2{
+        font-size: 1.8rem;
+    }
+    .get-in-touch p{
+       
+        margin-top: 3%;
+        font-size: 1.3rem;
+
+    }
+    .contact-me p{
+        font-size: 1.3rem;
+        
+    }
+}
+
+@media screen and (min-width: 1023px){
+
+    /* Navigation section */
+    nav{
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-bar{
+        display: none;
+    }
+    nav ul{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      
+    }
+    .nav-bar ul li{
+        margin-right: 40px;
+    }
+    .nav-bar ul li a{
+         font-size: 1rem;
+     }   
+    
+      /* Header Section */
+      .hero-section{
+          padding: 0 7%;
+      }
+      #header{
+          padding-top: 10%;
+          padding-bottom: 0;
+      }
+      .profile-content{
+          margin-left: 0;
+          order: 1;
+          text-align: left;
+          margin-top: 23%;
+      }
+      .profile-content p{
+        font-size: 0.9rem;
+        
+        }
+        .profile-content h1{
+            font-size: 1.7rem;
+        }
+        .profile-content h3{
+            font-size: 1.2rem;
+        }
+        .my-profile-pix{
+            order: 2;
+            max-width: 47%;
+            margin-bottom: 0;
+            margin-left: 20px;
+        }
+        .btn{
+            padding: 8px 25px;
+            font-size: 0.8rem;
+            margin-top: 2%;
+        }
+        .social-links{
+            margin-left: 0;
+        }
+
+        /* About Section */
+        .about-section, .skill-section, .project-section, .contact-section{
+            padding: 3% 7% 10%;
+        }
+        .about-heading, .skill-heading, .project-heading, .contact-heading{
+            font-size: 1.5rem;
+            margin-bottom: 6%;
+        }
+        .about-content{
+            padding: 0 4%;
+        }
+        .about-img{
+            margin: 0;
+            max-width: 40%;
+            object-fit: cover;
+        }
+        .about-info{
+            margin-left: 0;
+            max-width: 50%;
+            margin-left: 10%;
+        }
+        .about-info h2{
+            margin-top: 30px;
+            font-size: 1.2rem; 
+            font-weight: 700;
+        }
+        .about-info p{
+            line-height: 1.8;
+            font-size: 0.9rem;
+            
+        }
+
+        /* Skills Section */
+        .skill-content-inner{
+            padding: 5% 12% 0;
+        }
+
+        /* Project Section */
+        .project-card{
+            margin-left: 0;
+        }
+        .col-lg-4{
+            /* flex: 0 0 45%; */
+            max-width: 45%;
+            margin-left: 30px;
+        }
+
+        /* Contact Section */
+        .contact-section{
+            padding-bottom: 5%;
+        }
+        .get-in-touch h2{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .get-in-touch p{
+            text-align: center;
+           
+        }
+        .contact-me {
+            text-align: center;
+        }
+        .contact-me p{
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-right: 5%;
+       
+
+        }
+    
+
+        /* Footer Section */
+        .footer-content p{
+            padding: 8px;
+            font-size: 1rem;
+            margin-bottom: 0;
+            text-align: center;
+        
+        }
+
+}
+
+@media screen and (min-width: 1280px){
+
+     /* Header Section */
+    .profile-content{
+        margin-top: 24%;
+    }
+    .profile-content p{
+    font-size: 1.1rem;
+    
+    }
+    .profile-content h1{
+        font-size: 2rem;
+    }
+    .profile-content h3{
+        font-size: 1.4rem;
+    }
+    .my-profile-pix{
+        max-width: 48%;
+    }
+    .btn{
+        padding: 8px 30px;
+        font-size: 0.9rem;
+        margin-top: 2%;
+    }
+
+    /* About Section */
+    .about-info{
+        margin-top: 3%;
+    }  
+    .about-info h2{
+        font-size: 1.4rem;     
+    }
+    .about-info p{
+        line-height: 2;
+        font-size: 1.1rem;
+        
+    }
+        
+    /* Skills Section */
+    .skill-content-inner{
+        padding: 5% 12% 0;
+        /* margin-left: 8%; */
+    }
+    .skill-card.col-lg-3{
+        flex: 0 0 33%;
+    }
+
+    /* Contact Section */
+
+    .get-in-touch h2{
+        font-size: 2.3rem;
+    }
+    .get-in-touch p{
+        font-size: 1.3rem;
+        padding: 0 9%;
+        
+    }
+    .contact-me p{     
+        font-size: 1.3rem;
+    }
+    .form-btn{
+        font-size: 1.1rem;
+    }
+}
